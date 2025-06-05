@@ -1,0 +1,267 @@
+type: collection.insomnia.rest/5.0
+name: SpringBoot API Twitter Clone
+meta:
+  id: wrk_425963dfa4694784805a60ba664906d6
+  created: 1749094986669
+  modified: 1749094986669
+collection:
+  - name: Endpoints API
+    meta:
+      id: fld_b2366cef7a874d90b4d138e4479a6fd2
+      created: 1749094967434
+      modified: 1749094967434
+      sortKey: -1749094986672
+    children:
+      - url: http://localhost:8190/register
+        name: Registrar usuario
+        meta:
+          id: req_42cf85f101b74b7a99048a989e6a13dd
+          created: 1749094315783
+          modified: 1749097349482
+          isPrivate: false
+          sortKey: -1749094315
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {"username": "carlo", 
+             "password": "admin123",
+             "email": "carlo@gmail.com"
+             
+            }
+        headers:
+          - id: pair_661d5ed0248141f1882f773908b2aedb
+            name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/users
+        name: Obtener todos los usuarios
+        meta:
+          id: req_bb995b470a8b4e9d9f08b7aeb0d8bee0
+          created: 1749094315783
+          modified: 1749098742133
+          isPrivate: false
+          sortKey: -1749094315
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_a0e61fd5cbbe440bbf2d541dc46125e7
+          - id: pair_a18e2c6ce8bd452a97faae9888c7fd88
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5NzM1NCwiZXhwIjoxNzQ5MTAwOTU0fQ.5mGEQRJbCUoIQCE1TVUCPoLRyiSnjsWzBF1E_i5wqwc
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/users/a0a698a2-1001-4fed-8eff-4a20cc05b08f/posts
+        name: Obtener posts del usuario
+        meta:
+          id: req_5935634412004c1fa2248137ca96d35c
+          created: 1749094315784
+          modified: 1749098153675
+          isPrivate: false
+          sortKey: -1749094315
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_8f6feb0533894a6d81499eb4e6ade96e
+          - id: pair_983b9ee52d154e7b9c32cef9c57eb0f2
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5ODA5NCwiZXhwIjoxNzQ5MTAxNjk0fQ.10bku8ROINYvgJu53494KEz5A3lXoFSIxIIepQKOeec
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/post/likes
+        name: Dar like a post
+        meta:
+          id: req_c7e52d29ca6d479e86145dcc47accb18
+          created: 1749094315784
+          modified: 1749098740540
+          isPrivate: false
+          sortKey: -1749094315
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"userId": "a0a698a2-1001-4fed-8eff-4a20cc05b08f", "postId":
+            "abf9e869-17e2-4282-82c1-b2ec232afd18"}'
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_5864565701084ea9b2d42a32b97a6519
+          - id: pair_92c6e4d40c6d49e991db7728449957bf
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5NzM1NCwiZXhwIjoxNzQ5MTAwOTU0fQ.5mGEQRJbCUoIQCE1TVUCPoLRyiSnjsWzBF1E_i5wqwc
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/users/likes
+        name: Obtener posts con like del usuario
+        meta:
+          id: req_effd75e6fb6e46cd87db071b082c3a42
+          created: 1749094315784
+          modified: 1749098739763
+          isPrivate: false
+          sortKey: -1749094315
+        method: GET
+        body:
+          mimeType: application/json
+        parameters:
+          - name: userId
+            value: a0a698a2-1001-4fed-8eff-4a20cc05b08f
+            id: pair_648a698fd71a49c1af5902d1039108d3
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_7a7dbbd2b5384ed49f2013e047d1732e
+          - id: pair_dd1f7f58a1704dd18f100b35897221cb
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5NzM1NCwiZXhwIjoxNzQ5MTAwOTU0fQ.5mGEQRJbCUoIQCE1TVUCPoLRyiSnjsWzBF1E_i5wqwc
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/login
+        name: Login
+        meta:
+          id: req_7c3d3fa8e1064fb2818fb510a2651a1f
+          created: 1749096083346
+          modified: 1749097620940
+          isPrivate: false
+          sortKey: -1749096083346
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "username": "carlo",
+              "password": "admin123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/post
+        name: Post
+        meta:
+          id: req_211a9636aca04c43a9b595be38b623dc
+          created: 1749096728237
+          modified: 1749098106041
+          isPrivate: false
+          sortKey: -1749096083446
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"content": "hola perro"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_d90226b24cd4474c94db6bba4efd91eb
+          - id: pair_80ce05e5ba7842629992d318ebdcb415
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5ODA5NCwiZXhwIjoxNzQ5MTAxNjk0fQ.10bku8ROINYvgJu53494KEz5A3lXoFSIxIIepQKOeec
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8190/post/dislike
+        name: Dislike
+        meta:
+          id: req_3422083aa0134f218fa5b1b0224a6daa
+          created: 1749098417701
+          modified: 1749098736132
+          isPrivate: false
+          sortKey: -1749096083546
+        method: DELETE
+        parameters:
+          - id: pair_cfc45dff46434b88abfe2fe09e733a52
+            name: postId
+            value: abf9e869-17e2-4282-82c1-b2ec232afd18
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_bb857eb007034d17b13f6920ba7c0b1c
+          - id: pair_c569abd8594e41c1890cb94570801ffa
+            name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsbyIsImlhdCI6MTc0OTA5ODA5NCwiZXhwIjoxNzQ5MTAxNjk0fQ.10bku8ROINYvgJu53494KEz5A3lXoFSIxIIepQKOeec
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5de741b94517ec8987bb4c85dd17630e4ff5445c
+    created: 1749094990044
+    modified: 1749094990044
+environments:
+  name: Base Environment
+  meta:
+    id: env_5de741b94517ec8987bb4c85dd17630e4ff5445c
+    created: 1749094990041
+    modified: 1749094990041
+    isPrivate: false
